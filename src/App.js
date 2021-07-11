@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [auth, setAuth] = useState({})
+
+  useEffect(() => {
+    if (!auth)
+      setAuth(false)
+    return
+  }, [auth])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <Switch>
+          <Route exact path='/' render={() => <h1>Home</h1>} />
+          <Route exact path='/exp' render={() => <h1>Exp</h1>} />
+        </Switch>
+      </div>
+    </>
   );
 }
 
