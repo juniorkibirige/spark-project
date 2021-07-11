@@ -1,14 +1,24 @@
 import React from 'react'
+import { useState } from 'react';
 import {ReactComponent as Logo} from './../../Assets/instagram.svg'
 
 const Login = () => {
+    const [auth, setAuth] = useState({email: '', passwd: '', remember: false, auth: false})
 
     const handleChange = (e) => {
-
+        const {name, value} = e.target
+        setAuth({
+            [name]: value
+        })
     }
 
     const handleSubmit = (e) => {
-
+        e.preventDefault()
+        if(auth.email.length > 0 && auth.passwd.length > 0) {
+            setAuth({
+                auth: true
+            })
+        }
     }
 
     return (

@@ -1,21 +1,21 @@
 import './App.css';
 import { Switch, Route } from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import Login from './Pages/Login/Login';
+// import { useEffect, useState } from 'react';
 
 function App() {
-  const [auth, setAuth] = useState({})
+  // const [auth, setAuth] = useState({email: '', passwd: '', remember: false, auth: false})
 
-  useEffect(() => {
-    if (!auth)
-      setAuth(false)
-    return
-  }, [auth])
+  // useEffect(() => {
+  //   if (!auth.auth)
+  //     setAuth(false)
+  //   return
+  // }, [auth])
   return (
     <>
       <div>
         <Switch>
-          <Route exact path='/' render={() => <h1>Home</h1>} />
-          <Route exact path='/exp' render={() => <h1>Exp</h1>} />
+          <Route exact path='/' component={Login} />
         </Switch>
       </div>
     </>
