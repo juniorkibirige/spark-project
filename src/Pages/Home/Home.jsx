@@ -1,11 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Home = (props) => {
+const Home = ({appState}) => {
     return (
         <>
-        <h1>Home</h1>
+            <div>
+                <h1>Home</h1>
+            </div>
         </>
     )
+}
+
+Home.propTypes = {
+    appState: PropTypes.object.isRequired,
 }
 
 export default Home;
