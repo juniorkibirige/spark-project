@@ -1,0 +1,32 @@
+.div-login {
+    margin-top: 10vh !important;
+    margin: 0 auto;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+input {
+    width: 95%;
+    align-self: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #fafafa;
+    box-shadow: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+button {
+    width: 100%;
+    align-self: center;
+    margin: 10px 0;
+    background-color: dodgerblue;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+}
