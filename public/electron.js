@@ -11,6 +11,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    icon: 'pharmacy.ico'
   });
 
   // and load the index.html of the app.
