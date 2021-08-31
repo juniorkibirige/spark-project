@@ -48,6 +48,7 @@ const NavBar = (props) => {
                         <input className="form-control me-2 mr-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success my-2 my-sm-0" style={{maxWidth: 'min-content'}} type="submit">Search</button>
                     </form>
+                    <button className="btn btn-danger d-md-none d-sm-block" style={{maxWidth: 'min-content'}}>Logout</button>
                 </div>
                 </div>
             </nav>
