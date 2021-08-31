@@ -1,11 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import logo from './../../Assets/drugstore.png'
+import NavBar from '../../Components/Navs/navbar'
 
-const Home = ({appState}) => {
+const Home = ({ appState }) => {
     return (
         <>
             <div>
-                <h1>Home</h1>
+                <NavBar logo={logo} />
+                <div className="container">
+                    <div className="row">
+                    </div>
+                </div>
             </div>
         </>
     )
