@@ -1,16 +1,16 @@
 import React from 'react'
 import { Redirect, Route } from 'react-router-dom'
 
-let state_of_state = sessionStorage.getItem('SparkStateApp')
+let state_of_state = localStorage.getItem('SparkStateApp')
 if(!state_of_state) {
     let StateApp = {
         isLoggedIn: false,
         user: []
     }
-    sessionStorage.setItem('SparkStateApp', JSON.stringify(StateApp))
+    localStorage.setItem('SparkStateApp', JSON.stringify(StateApp))
 }
 
-let state = sessionStorage.getItem('SparkStateApp')
+let state = localStorage.getItem('SparkStateApp')
 let StateApp = JSON.parse(state)
 
 const Auth = {
