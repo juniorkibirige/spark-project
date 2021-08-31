@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import './../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './Login.css'
 import PropTypes from 'prop-types'
 
