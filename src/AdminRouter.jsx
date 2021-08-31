@@ -24,7 +24,7 @@ const AdminRouter = ({ component: Component, path, ...rest}) => (
     {...rest}
     render={
         props => Auth.isLoggedIn
-        ? (<Component {...props} />)
+        ? (<Component {...props} appState={Auth} />)
         : (<Redirect to={{
             pathname: "/",
             state: {
