@@ -11,8 +11,21 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: 'pharmacy.ico'
+    icon: 'pharmacy.ico',
   });
+
+  // Verify self signed certificate
+  win.webContents.session.setCertificateVerifyProc((request, callback) => {
+    var { hostname, certificate, validatedCertificate, verificationResult, errorCode } = request;
+    // if(isNotMyCertificate(certificate)) { callback(-2); return; }
+    console.log('Self Signed Certificate: ');
+    console.log(certificate.issuerName);
+    console.log(certificate.fingerprint);
+
+    if (hostname === 'cdn.tms-dist.lan' && certificate.validExpiry && certificate.validStart && certificate.fingerprint === '74:AD:CE:7D:10:E6:78:4E:6B:33:44:41:6E:3E:7B:35:09:6A:81:82')
+      callback(0);
+    else callback(-2);
+  })
 
   // and load the index.html of the app.
   // win.loadFile("index.html");
